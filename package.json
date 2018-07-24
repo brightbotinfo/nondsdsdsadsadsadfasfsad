@@ -7,6 +7,7 @@
     "start": "node bot.js"
   },
   "dependencies": {
+    "ffmpeg-binaries": "^3.2.2-3",
     "ascii-data-table": "^2.1.1",
     "canvas": "^1.6.10",
     "dateformat": "^3.0.3",

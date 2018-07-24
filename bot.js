@@ -265,4 +265,4 @@ ${prefix}queue â‡ڈ ظ„ظ…ط¹ط±ظپط© ظ‚ط§ط¦ظ…ط© ط§ظ�
    }
    }); 
    
-	client.login("NDcxMDY0NzAyNTIxMzExMjY0.DjfZGw.THlPKj-aQ6vVTzHQ-v1f3yVq1BY");
+client.login(process.env.BOT_TOKEN);

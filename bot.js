@@ -32,37 +32,6 @@ client.on('message', msg => {
   }
 });  
 
-
-client.on("message", message => {
-      if (message.content === "ping") {
-      const embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-  .addField('     **=-=-=-=-=-=-=** ' ,' ** :smiley:  pong!**')
-  .addField('** : سرعة الإتصال هي**' , `${Date.now() - message.createdTimestamp}` + ' ms')
-  message.channel.sendEmbed(embed);
-    }
-});
-
-
-client.on('ready', function(){
-    var ms = 1000000 ;
-    var setGame = ['شغال 24 ساعة','ابو خليل'];
-    var i = -1;
-    var j = 0;
-    setInterval(function (){
-        if( i == -1 ){
-            j = 1;
-        }
-        if( i == (setGame.length)-1 ){
-            j = -1;
-        }
-        i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/GamerzBot`);
-    }, ms);
-
-});
-
-
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(` 

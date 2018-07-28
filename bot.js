@@ -27,8 +27,8 @@ client.on('ready', () => {
   console.log('')
 });
 client.on('message', msg => {
-  if (msg.content === 'السلام عليكم') {
-    msg.reply('وعليكم السلام ورحمة الله وبركاته');
+  if (msg.content === 'ابراهيم-محمد-شغال؟') {
+    msg.reply('اي هههههه شغال ونص :joy:');
   }
 });  
 
@@ -37,7 +37,7 @@ client.on('message', message => {
     if (message.author.bot) return;
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('===')){
+if (message.content.startsWith('!send')){
  if(!message.author.id === '370828320910213131') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{

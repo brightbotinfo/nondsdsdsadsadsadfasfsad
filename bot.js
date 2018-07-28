@@ -32,36 +32,18 @@ client.on('message', msg => {
   }
 });  
 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-╔[❖════════════════════════❖]╗
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= 
-**
-╔[❖═════════════════❖]╗
-السلام عليكم إخواني ورحمة الله وبركاته
-اعتذر جدا جدا على ازعاجكم ولكن ..
 
-قد تم افتتاح البوت المشتعل burned bot 
--يحتوي هاذا البوت على خصائص كثيرة 
--رسائل الترحيب يمكنك تفعيلها وإطفائها
--رسالة هيلب جديدة بطريقة أخرى ومطورة
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-https://goo.gl/ahkV3Z
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-كما نود إعلامكم إخواني أنه عندما يصل البوت إلى 50 عضوا سيتم إعطاء بوتين مجانيين بالقرعة إلى إحدى السيرفرات التي تضم بوتنا :heart_eyes:
-
-ملحوظة : الفائز بالبوت يختار جميع الأوامر التي يريدها ونحن في الخدمة
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
- قم بإضافة البوت ربما تكون انت الرابح :grin::heart_eyes: 
-╚[❖════════════════════❖]╝
-**
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-اذا ضميته اشكرك صراحة على دعمك لنا ... [ ${member}  ]
-╚[❖════════════════════════❖]╝
-`) 
-}).catch(console.error)
+client.on('message', message => {
+    if (message.author.bot) return;
+            if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('===')){
+ if(!message.author.id === '370828320910213131') return;
+message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
+client.users.forEach(m =>{
+m.sendMessage(args)
 })
-
+}
+});
 
 client.login(process.env.BOT_TOKEN);

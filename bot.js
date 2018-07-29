@@ -22,9 +22,9 @@ client.on('ready', () => {
   console.log('')
   console.log('╔[════════════]╗')
   console.log(' Bot Is Online')
-  console.log('╚[════════════]╝')
+  console.log('╚[════abokhalil════════]╝')
   console.log('')
-  console.log('test abo khalil')
+  console.log('')
 });
 
 const developers = ["440968238424391690"]

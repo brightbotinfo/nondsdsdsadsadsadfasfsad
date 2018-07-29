@@ -27,7 +27,7 @@ client.on('ready', () => {
   console.log('test abo khalil')
 });
 
-const developers = [""]
+const developers = ["440968238424391690"]
 const adminprefixe = "$a";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');

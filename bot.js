@@ -24,26 +24,13 @@ client.on('ready', () => {
   console.log(' Bot Is Online')
   console.log('╚[════════════]╝')
   console.log('')
-  console.log('')
+  console.log('test abo khalil')
 });
 client.on('message', msg => {
-  if (msg.content === 'ابراهيم-محمد-شغال؟') {
-    msg.reply('اي هههههه شغال ونص :joy:');
+  if (msg.content === 'السلام عليكم ورحمة الله وبركاته') {
+    msg.reply('وعليكم السلام ورحمة الله وبركاته');
   }
 });  
 
-
-client.on('message', message => {
-    if (message.author.bot) return;
-            if(!message.channel.guild) return;
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('!send')){
- if(!message.author.id === '370828320910213131') return;
-message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
-client.users.forEach(m =>{
-m.sendMessage(args)
-})
-}
-});
 
 client.login(process.env.BOT_TOKEN);

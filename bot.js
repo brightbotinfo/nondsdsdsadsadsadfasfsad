@@ -27,7 +27,7 @@ client.on('ready', () => {
   console.log('')
 });
 
-const developers = ["440968238424391690"]
+const developers = ["370828320910213131"]
 
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
